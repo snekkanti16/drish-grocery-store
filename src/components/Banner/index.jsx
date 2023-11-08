@@ -10,6 +10,7 @@ const Banner = ()=> {
         }}>
             <div className="content">
                 <h3>
+                   <span> fresh </span> {' '} 
                    <span> organic </span> {' '} products
                 </h3>
                 <p>

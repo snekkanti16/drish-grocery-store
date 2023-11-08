@@ -3,11 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faCalendar } from '@fortawesome/free-solid-svg-icons';
 
 import './Blogs.css';
+const blogs = [
+    {'id':1,'blogImage':'image/blog-1.jpg','blogUser':'by NSL','blogDate':'8th Nov, 2023','blogHeading':'Organic Vegetables And Fruits','blogDesc':'DRISH Grocery Store'},
+    {'id':2,'blogImage':'image/blog-2.jpg','blogUser':'by NSL','blogDate':'8th Nov, 2023','blogHeading':'Organic Vegetables And Fruits','blogDesc':'DRISH Grocery Store'},
+    {'id':3,'blogImage':'image/blog-3.jpg','blogUser':'by NSL','blogDate':'8th Nov, 2023','blogHeading':'Organic Vegetables And Fruits','blogDesc':'DRISH Grocery Store'}
+    ];
 
 const Blogs= () => {
-    const blogs = [{'id':1,'blogImage':'image/blog-1.jpg','blogUser':'by NSL','blogDate':'1st May, 2021','blogHeading':'Organic Vegetables And Fruits','blogDesc':'DRISH Grocery Store'},
-    {'id':2,'blogImage':'image/blog-2.jpg','blogUser':'by NSL','blogDate':'1st May, 2021','blogHeading':'Organic Vegetables And Fruits','blogDesc':'DRISH Grocery Store'},
-    {'id':3,'blogImage':'image/blog-3.jpg','blogUser':'by NSL','blogDate':'1st May, 2021','blogHeading':'Organic Vegetables And Fruits','blogDesc':'DRISH Grocery Store'}];
+   
     return (
       <section className="blogs" id="blogs">
         <h1 className="heading">
