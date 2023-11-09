@@ -1,0 +1,31 @@
+steps:
+  # Build the container image
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "gcr.io/lively-encoder-400214/drish-grocery-store:latest",
+        ".",
+      ]
+    # dir: 'app' # Working directory for build context
+  # Push the container image to Container Registry
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["push", "gcr.io/lively-encoder-400214/drish-grocery-store:latest"]
+  # Deploy container image to Cloud Run
+  - name: "gcr.io/cloud-builders/gcloud"
+    entrypoint: gcloud
+    args:
+      [
+        "beta",
+        "run",
+        "deploy",
+        "drish-grocery-store",
+        "--image",
+        "gcr.io/lively-encoder-400214/drish-grocery-store:latest",
+        "--region",
+        "us-central1",
+        "--platform",
+        "managed",
+        "--allow-unauthenticated",
+      ]
